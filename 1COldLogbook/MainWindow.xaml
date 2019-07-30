@@ -1,0 +1,32 @@
+﻿<Window x:Class="_1COldLogbook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1COldLogbook"
+        mc:Ignorable="d"
+        Title="Перевод журнала регистрации в старый формат" Height="110.463" Width="365.762" ResizeMode="NoResize" RenderTransformOrigin="0.5,0.5">
+    <!--<Window.RenderTransform>-->
+        <!--<RotateTransform x:Name="AnimatedRotateTransform2" Angle="0" />
+    </Window.RenderTransform>-->
+    
+    <Grid Margin="0,0,0,39">
+        <Button Content="Выполнить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,10,0,0" RenderTransformOrigin="0.5,0.5" Click="Button_Click">
+            <Button.RenderTransform>
+                <RotateTransform x:Name="AnimatedRotateTransform1" Angle="0" />
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="AnimatedRotateTransform1"
+                                Storyboard.TargetProperty="Angle" 
+                                From="-10" To="10" Duration="0:0:0.150" RepeatBehavior="2.25x" 
+                                AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</Window>
